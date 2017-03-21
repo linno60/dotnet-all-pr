@@ -36,7 +36,7 @@ git checkout master 2>&1 | Write-Host
 git status
 
 echo "Start to call merge depot tool"
-&"$MergeDepotTool" "$currentFolder\mergedepot" "-c $DhsConnectionConfigs -m $DepotToMerge -u $BaseUrl -f $BaseFolder -d $Domain"
+&"$MergeDepotTool" "$currentFolder\mergedepot" "-c" "$DhsConnectionConfigs" "-m" "$DepotToMerge" "-u" "$BaseUrl" "-f" "$BaseFolder" "-d" "$Domain"
 echo "Finish calling merge depot tool"
 
 echo "Start to push to git repository"
